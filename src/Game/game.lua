@@ -26,6 +26,7 @@ function game:update(dt)
 end
 
 function game:draw()
+  love.graphics.print(player.vspeed, 10, 0)
  render:draw(ground, player)
 end
 

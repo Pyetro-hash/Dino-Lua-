@@ -14,7 +14,7 @@ player.height = player.img:getHeight()
 player.y = 430-player.height
 
 function player:gravity(gravity_force, dt)
-  if self.Onfloor == false then
+  if not self.Onfloor then
     self.vspeed = self.vspeed + gravity_force * dt
   end
   self.y = self.y + self.vspeed
@@ -29,7 +29,7 @@ end
 
 function player:update(gravity_force, dt,input)
   self:gravity(gravity_force, dt)
-  if input == true then self:jump(self.jump_force) end
+  if input then self:jump(self.jump_force) end
   player.Onfloor = false
 end
 
