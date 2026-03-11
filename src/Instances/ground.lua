@@ -18,7 +18,9 @@ function ground_manager:create(x)
     local tile = {
       x = start + self.width * i,
       y = self.y,
-      img = self.img
+      img = self.img,
+      width = self.width,
+      height = self.height
     }
 
     table.insert(self.Tiles, tile)
