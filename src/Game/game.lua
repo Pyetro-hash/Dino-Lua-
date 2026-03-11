@@ -1,5 +1,6 @@
 local render = require("/src/Game/renderer")
 local ground = require("/src/Instances/ground")
+local player = require("/src/Instances/player")
 
 local game = {}
 
@@ -12,7 +13,7 @@ function game:update(dt)
 end
 
 function game:draw()
- render:draw(ground)
+ render:draw(ground, player)
 end
 
 
