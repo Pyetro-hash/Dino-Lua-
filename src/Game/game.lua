@@ -23,7 +23,7 @@ function game:update(dt)
     return
   end
 
-  player:update(world.gravity, dt, input:get_inputs("w"))
+  player:update(world.gravity, dt, input:get_inputs("space"))
   ground:update(dt)
   manage_obstacles:update(dt)
 

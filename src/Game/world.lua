@@ -1,5 +1,5 @@
 local world_conf = {
-  gravity = 18,
+  gravity = 24,
 }
 
 return world_conf

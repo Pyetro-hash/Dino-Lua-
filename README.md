@@ -12,4 +12,4 @@ Clone do jogo Dino do Chrome feito com Love2D.
 love .
 
 ## Controles
-W - Pular
+space - Pular
