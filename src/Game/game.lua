@@ -2,6 +2,7 @@ local render = require("/src/Game/renderer")
 local aabb = require("/src/Game/aabb")
 local input = require("/src/Game/inputs")
 local world = require("/src/Game/world")
+local manage_obstacles = require("/src/Game/spawn_obstacles")
 
 local ground = require("/src/Instances/ground")
 local player = require("/src/Instances/player")
@@ -17,6 +18,7 @@ function game:update(dt)
 
   player:update(world.gravity, dt, input:get_inputs())
   ground:update(dt)
+  manage_obstacles:update(dt)
 
   if aabb:detect_collision_ground(player, ground) then
     player.Onfloor = true
@@ -26,8 +28,7 @@ function game:update(dt)
 end
 
 function game:draw()
-  love.graphics.print(player.vspeed, 10, 0)
- render:draw(ground, player)
+ render:draw(ground, player, manage_obstacles)
 end
 
 
