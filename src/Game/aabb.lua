@@ -1,8 +1,8 @@
 local manage_aabb = {}
 
-function manage_aabb:detect_collision_ground(obj1, obj2)
+function manage_aabb:detect_collision_tables(obj1, obj2)
 
-  for i, tile in ipairs(obj2.Tiles) do
+  for i, tile in ipairs(obj2) do
 
     if obj1.x < tile.x + tile.width and
        obj1.x + obj1.width > tile.x and

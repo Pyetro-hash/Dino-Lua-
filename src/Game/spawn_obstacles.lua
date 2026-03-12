@@ -1,5 +1,5 @@
 local manage_obstacles = {
-  speed = 350,
+  speed = 300,
   x = 720,
   y = 430,
   obstacles = {}
